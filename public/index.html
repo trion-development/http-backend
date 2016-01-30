@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <title>Hello CORS</title>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+    <script src="hello.js"></script>
+</head>
+<body>
+<div ng-controller="HelloCtrl as hello">
+    <p>The ID is {{hello.greeting.id}}</p>
+    <p>The content is {{hello.greeting.content}}</p>
+</div>
+
+</body>
+</html>
