@@ -24,7 +24,7 @@ public class GreetingController {
     private final AtomicLong counter = new AtomicLong();
     private final Logger logger = LoggerFactory.getLogger(getClass());
 
-    @CrossOrigin(origins = "http://localhost:9000")
+    @CrossOrigin
     @RequestMapping("/greeting")
     public
     @ResponseBody
@@ -39,6 +39,7 @@ public class GreetingController {
         return new Greeting(counter.incrementAndGet(), String.format(template, name));
     }
 
+    @CrossOrigin
     @RequestMapping("/time")
     public SseEmitter time() throws IOException {
         final SseEmitter sseEmitter = new SseEmitter();
